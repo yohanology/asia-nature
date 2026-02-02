@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip:*)",
+      "Bash(ls:*)",
+      "Bash(for img in asia_nature_bernard_vu_2.jpg asia_nature_bernard_vu_3.jpg asia_nature_bernard_vu_6.jpg asia_nature_bureau_shenzhen_1.jpg asia_nature_clients_4.jpg asia_nature_clients_5.jpg)",
+      "Bash(do sips:*)",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(sips:*)"
+    ]
+  }
+}
