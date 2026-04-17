@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { LanguageSelector } from './LanguageSelector';
 import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../translations/content';
@@ -36,9 +37,9 @@ export function Navbar() {
   return <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-[#F9F8F6]/95 backdrop-blur-md border-b border-[#2F4F3E]/10 py-4 shadow-sm' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <a href={`/${language}`} className="group">
+        <Link to={`/${language}`} className="group">
           <img src="/asia-nature-logo-2f4f3e-transparent.png" alt={t.alts.logo} className="h-12 w-auto transition-opacity group-hover:opacity-80" />
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center space-x-8">

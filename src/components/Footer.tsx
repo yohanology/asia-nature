@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../translations/content';
 export function Footer() {
@@ -10,9 +11,9 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
           <div className="md:col-span-5">
-            <a href={`/${language}`} className="block mb-6">
+            <Link to={`/${language}`} className="block mb-6">
               <img src="/asia-nature-logo-2f4f3e-transparent.png" alt={t.alts.logo} loading="lazy" decoding="async" className="h-12 w-auto brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" />
-            </a>
+            </Link>
             <p className="text-[#D4C5B0] text-sm leading-relaxed max-w-sm mb-8">
               {t.footer.description}
             </p>
