@@ -50,13 +50,19 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="lg:hidden text-[#2F4F3E]" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
+        <button
+          className="lg:hidden text-[#2F4F3E]"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-nav"
+        >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Nav */}
-      {isMobileMenuOpen && <div className="lg:hidden absolute top-full left-0 w-full bg-[#F9F8F6] border-b border-[#2F4F3E]/10 py-8 px-6 shadow-xl animate-in slide-in-from-top-5 duration-200">
+      {isMobileMenuOpen && <div id="mobile-nav" className="lg:hidden absolute top-full left-0 w-full bg-[#F9F8F6] border-b border-[#2F4F3E]/10 py-8 px-6 shadow-xl animate-in slide-in-from-top-5 duration-200">
           <div className="flex flex-col space-y-6">
             {navLinks.map((link) => <a key={link.href} href={link.href} className="text-xl font-serif font-medium text-[#2F4F3E]" onClick={() => setIsMobileMenuOpen(false)}>
                 {link.name}
