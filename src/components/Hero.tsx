@@ -49,7 +49,7 @@ export function Hero() {
         <div className="lg:col-span-5 relative mt-12 lg:mt-0">
           <div className="relative rounded-sm overflow-hidden shadow-2xl aspect-[4/5] lg:aspect-[3/4]">
             <div className="absolute inset-0 bg-[#2F4F3E]/10 mix-blend-multiply z-10"></div>
-            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2340&auto=format&fit=crop" alt={t.alts.heroLogistics} className="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2340&auto=format&fit=crop" alt={t.alts.heroLogistics} loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
 
             {/* Floating Stat Card */}
             <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-6 shadow-lg border-l-4 border-[#2F4F3E] z-20">

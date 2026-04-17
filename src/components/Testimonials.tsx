@@ -79,7 +79,7 @@ export function Testimonials() {
               >
                 {duplicatedTestimonials.map((item, index) => <div key={index} className="flex-none w-[340px] bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors duration-300 overflow-hidden group">
                     <div className="aspect-[4/3] overflow-hidden bg-[#1A1A1A]">
-                      <img src={item.image} alt={`${item.author} - ${item.company}`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                      <img src={item.image} alt={`${item.author} - ${item.company}`} loading="lazy" decoding="async" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                     </div>
                     <div className="p-6">
                       <div className="text-[#8FA89B] text-3xl font-serif leading-none mb-3">
