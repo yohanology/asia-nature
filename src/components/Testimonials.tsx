@@ -79,7 +79,10 @@ export function Testimonials() {
             <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#2F4F3E] to-transparent z-10 pointer-events-none"></div>
 
             <div className="overflow-hidden -mx-6 px-6 md:mx-0 md:px-0">
-              <div className="flex gap-6 animate-scroll">
+              <div
+                className="flex gap-6 animate-scroll"
+                style={{ ['--asia-scroll-distance' as string]: `calc(-340px * ${testimonials.length} - ${testimonials.length * 24}px)` }}
+              >
                 {duplicatedTestimonials.map((item, index) => <div key={index} className="flex-none w-[340px] bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors duration-300 overflow-hidden group">
                     <div className="aspect-[4/3] overflow-hidden bg-[#1A1A1A]">
                       <img src={item.image} alt={`${item.author} - ${item.company}`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
@@ -115,23 +118,5 @@ export function Testimonials() {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(
-              calc(
-                -340px * ${testimonials.length} - ${testimonials.length * 24}px
-              )
-            );
-          }
-        }
-
-        .animate-scroll {
-          animation: scroll 40s linear infinite;
-        }
-      `}</style>
     </section>;
 }

@@ -38,7 +38,7 @@
   .font-serif {
     font-family: 'Playfair Display', serif;
   }
-  
+
   .font-sans {
     font-family: 'Inter', sans-serif;
   }
@@ -46,7 +46,7 @@
   .text-primary {
     color: var(--color-primary);
   }
-  
+
   .bg-primary {
     background-color: var(--color-primary);
   }
@@ -54,4 +54,17 @@
   .bg-cream {
     background-color: var(--color-background);
   }
+}
+
+@keyframes asia-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(var(--asia-scroll-distance, -100%)); }
+}
+
+.animate-scroll {
+  animation: asia-scroll 40s linear infinite;
+}
+
+.animate-scroll-slow {
+  animation: asia-scroll 50s linear infinite;
 }

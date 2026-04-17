@@ -111,7 +111,10 @@ export function Founder() {
             <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#F9F8F6] to-transparent z-10 pointer-events-none"></div>
 
             <div className="overflow-hidden">
-              <div className="flex gap-6 animate-scroll-slow">
+              <div
+                className="flex gap-6 animate-scroll-slow"
+                style={{ ['--asia-scroll-distance' as string]: 'calc(-400px * 4 - 96px)' }}
+              >
                 {["/asia_nature_bernard_vu_3.jpg", "/asia_nature_bernard_vu_2.jpg", "/asia_nature_bernard_vu_6.jpg", "/asia_nature_bernard_vu_7.jpg", "/asia_nature_bernard_vu_3.jpg", "/asia_nature_bernard_vu_2.jpg", "/asia_nature_bernard_vu_6.jpg", "/asia_nature_bernard_vu_7.jpg"].map((src, index) => <div key={index} className="flex-none w-[400px] aspect-[16/10] overflow-hidden rounded-sm shadow-lg border border-[#E8E4D9]">
                     <img src={src} alt={`Trade show ${index + 1}`} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
                   </div>)}
@@ -121,19 +124,5 @@ export function Founder() {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes scroll-slow {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(calc(-400px * 4 - 96px));
-          }
-        }
-
-        .animate-scroll-slow {
-          animation: scroll-slow 50s linear infinite;
-        }
-      `}</style>
     </section>;
 }
