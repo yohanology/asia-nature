@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Claude Code / gstack — personal and machine-local
+.claude/settings.local.json
+.gstack/
