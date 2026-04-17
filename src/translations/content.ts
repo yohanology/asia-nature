@@ -176,6 +176,13 @@ export const content = {
       contactTitle: 'Contact',
       copyright: 'Tous droits réservés.',
       madeWith: 'Made with high-quality 🍜'
+    },
+    alts: {
+      logo: 'Asia Nature Limited — Société de commerce mondial',
+      heroLogistics: 'Logistique internationale et conteneurs maritimes',
+      officeMeeting: 'Réunion dans le bureau de Shenzhen',
+      founderPortrait: 'Bernard Trong Huy Vu — Fondateur',
+      tradeShow: (index: number) => `Salon international n°${index}`
     }
   },
   en: {
@@ -355,6 +362,13 @@ export const content = {
       contactTitle: 'Contact',
       copyright: 'All rights reserved.',
       madeWith: 'Made with high-quality 🍜'
+    },
+    alts: {
+      logo: 'Asia Nature Limited — Global Trade Company',
+      heroLogistics: 'Global logistics and shipping containers',
+      officeMeeting: 'Meeting in our Shenzhen office',
+      founderPortrait: 'Bernard Trong Huy Vu — Founder',
+      tradeShow: (index: number) => `International trade show #${index}`
     }
   }
 };

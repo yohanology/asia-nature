@@ -25,7 +25,7 @@ export function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#D4C5B0] -z-10 rounded-full opacity-50"></div>
-              <img src="/asia_nature_bureau_shenzhen_1.jpg" alt="Meeting in Shenzhen office" className="w-full h-auto shadow-xl rounded-sm grayscale hover:grayscale-0 transition-all duration-700" />
+              <img src="/asia_nature_bureau_shenzhen_1.jpg" alt={t.alts.officeMeeting} className="w-full h-auto shadow-xl rounded-sm grayscale hover:grayscale-0 transition-all duration-700" />
               <div className="absolute -bottom-6 -right-6 bg-white p-6 shadow-lg max-w-xs border-l-4 border-[#2F4F3E]">
                 <p className="font-serif italic text-[#2F4F3E] text-lg">
                   {about.quote}

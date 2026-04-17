@@ -37,7 +37,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <a href={`/${language}`} className="group">
-          <img src="/asia-nature-logo-2f4f3e-transparent.png" alt="Asia Nature Limited - Global Trade Company" className="h-12 w-auto transition-opacity group-hover:opacity-80" />
+          <img src="/asia-nature-logo-2f4f3e-transparent.png" alt={t.alts.logo} className="h-12 w-auto transition-opacity group-hover:opacity-80" />
         </a>
 
         {/* Desktop Nav */}
