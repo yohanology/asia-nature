@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../translations/content';
 export function Footer() {
@@ -17,9 +17,6 @@ export function Footer() {
             <p className="text-[#D4C5B0] text-sm leading-relaxed max-w-sm mb-8">
               {t.footer.description}
             </p>
-            <div className="flex space-x-4">
-              
-            </div>
           </div>
 
           <div className="md:col-span-2">
