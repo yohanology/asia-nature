@@ -27,11 +27,6 @@ const testimonialsMeta = [{
   company: 'LogiPro International',
   location: 'Genève, Suisse',
   image: "/asia_nature_clients_5.jpg"
-}, {
-  author: 'Ahmed El Mansouri',
-  company: 'AfricaTrade Solutions',
-  location: "Abidjan, Côte d'Ivoire",
-  image: "/asia_nature_clients_2.jpg"
 }];
 export function Testimonials() {
   const {

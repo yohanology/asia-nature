@@ -124,11 +124,6 @@ export const content = {
         quote:
         "Un accompagnement sur-mesure qui a transformé notre chaîne d'approvisionnement. Leur expertise logistique est un véritable atout compétitif.",
         role: 'Directrice Opérations'
-      },
-      {
-        quote:
-        "Asia Nature nous a permis d'accéder à des fournisseurs de premier plan en Asie. Leur réseau et leur expertise sont incomparables.",
-        role: 'CEO'
       }]
 
     },
@@ -310,11 +305,6 @@ export const content = {
         quote:
         'Tailor-made support that transformed our supply chain. Their logistics expertise is a real competitive advantage.',
         role: 'Operations Director'
-      },
-      {
-        quote:
-        'Asia Nature gave us access to top-tier suppliers in Asia. Their network and expertise are incomparable.',
-        role: 'CEO'
       }]
 
     },
