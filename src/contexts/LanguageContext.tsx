@@ -1,22 +1,29 @@
-import React, { createContext, useContext } from 'react';
+import { createContext, useContext, useEffect, type ReactNode } from 'react';
+
 type Language = 'fr' | 'en';
+
 interface LanguageContextType {
   language: Language;
 }
+
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
 export function LanguageProvider({
   language,
-  children
+  children,
+}: {
+  language: Language;
+  children: ReactNode;
+}) {
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
-
-
-}: {language: Language;children: ReactNode;}) {
-  return <LanguageContext.Provider value={{
-    language
-  }}>
-      {children}
-    </LanguageContext.Provider>;
+  return <LanguageContext.Provider value={{ language }}>
+    {children}
+  </LanguageContext.Provider>;
 }
+
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (context === undefined) {
