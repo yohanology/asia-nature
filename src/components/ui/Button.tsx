@@ -1,17 +1,21 @@
-import React from 'react';
+import { cloneElement, isValidElement, type ReactElement, type ButtonHTMLAttributes } from 'react';
 import { ArrowRight, ArrowDown } from 'lucide-react';
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'outline' | 'ghost' | 'white';
   size?: 'sm' | 'md' | 'lg';
   withArrow?: boolean;
   withDownArrow?: boolean;
+  asChild?: boolean;
 }
+
 export function Button({
   children,
   variant = 'primary',
   size = 'md',
   withArrow = false,
   withDownArrow = false,
+  asChild = false,
   className = '',
   ...props
 }: ButtonProps) {
@@ -27,9 +31,26 @@ export function Button({
     md: 'text-base px-6 py-3',
     lg: 'text-lg px-8 py-4'
   };
-  return <button className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`} {...props}>
-      {children}
-      {withArrow && <ArrowRight className="ml-2 h-4 w-4" />}
-      {withDownArrow && <ArrowDown className="ml-2 h-4 w-4" />}
-    </button>;
+  const mergedClassName = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`.trim();
+  const content = <>
+    {children}
+    {withArrow && <ArrowRight className="ml-2 h-4 w-4" />}
+    {withDownArrow && <ArrowDown className="ml-2 h-4 w-4" />}
+  </>;
+
+  if (asChild && isValidElement(children)) {
+    const child = children as ReactElement<{ className?: string; children?: React.ReactNode }>;
+    return cloneElement(child, {
+      className: `${mergedClassName} ${child.props.className ?? ''}`.trim(),
+      children: <>
+        {child.props.children}
+        {withArrow && <ArrowRight className="ml-2 h-4 w-4" />}
+        {withDownArrow && <ArrowDown className="ml-2 h-4 w-4" />}
+      </>
+    });
+  }
+
+  return <button className={mergedClassName} {...props}>
+    {content}
+  </button>;
 }
