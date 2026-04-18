@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { Home } from './pages/Home';
 import { NotFound } from './pages/NotFound';
 import { LanguageProvider } from './contexts/LanguageContext';
@@ -11,5 +12,6 @@ export function App() {
       <Route path="/en" element={<LanguageProvider language="en"><Home /></LanguageProvider>} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    <Analytics />
   </BrowserRouter>;
 }
