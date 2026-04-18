@@ -29,7 +29,7 @@ export function Founder() {
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-[#D4C5B0] -z-10 rounded-full opacity-30"></div>
             <div className="relative">
-              <img src="/Bernard_Vu_-_2025-08-13_08.00.19.jpg" alt={t.alts.founderPortrait} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover grayscale shadow-xl rounded-sm" />
+              <img src="/Bernard_Vu_-_2025-08-13_08.00.19.webp" alt={t.alts.founderPortrait} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover grayscale shadow-xl rounded-sm" />
               <div className="absolute top-6 left-6">
                 <span className="inline-block bg-[#2F4F3E] text-white text-xs font-medium px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">
                   {t.founder.roleBadge}
@@ -114,7 +114,7 @@ export function Founder() {
                 className="flex gap-6 animate-scroll-slow"
                 style={{ ['--asia-scroll-distance' as string]: 'calc(-400px * 4 - 96px)' }}
               >
-                {["/asia_nature_bernard_vu_3.jpg", "/asia_nature_bernard_vu_2.jpg", "/asia_nature_bernard_vu_6.jpg", "/asia_nature_bernard_vu_7.jpg", "/asia_nature_bernard_vu_3.jpg", "/asia_nature_bernard_vu_2.jpg", "/asia_nature_bernard_vu_6.jpg", "/asia_nature_bernard_vu_7.jpg"].map((src, index) => <div key={index} className="flex-none w-[400px] aspect-[16/10] overflow-hidden rounded-sm shadow-lg border border-[#E8E4D9]">
+                {["/asia_nature_bernard_vu_3.webp", "/asia_nature_bernard_vu_2.webp", "/asia_nature_bernard_vu_6.webp", "/asia_nature_bernard_vu_7.webp", "/asia_nature_bernard_vu_3.webp", "/asia_nature_bernard_vu_2.webp", "/asia_nature_bernard_vu_6.webp", "/asia_nature_bernard_vu_7.webp"].map((src, index) => <div key={index} className="flex-none w-[400px] aspect-[16/10] overflow-hidden rounded-sm shadow-lg border border-[#E8E4D9]">
                     <img src={src} alt={t.alts.tradeShow(index + 1)} loading="lazy" decoding="async" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
                   </div>)}
               </div>

@@ -5,27 +5,27 @@ const testimonialsMeta = [{
   author: 'Jean-Marc Dubois',
   company: 'IndusFrance',
   location: 'Lyon, France',
-  image: "/asia_nature_clients_1.jpg"
+  image: "/asia_nature_clients_1.webp"
 }, {
   author: 'Sophie Laurent',
   company: 'GreenPack Solutions',
   location: 'Bruxelles, Belgique',
-  image: "/asia_nature_clients_2.jpg"
+  image: "/asia_nature_clients_2.webp"
 }, {
   author: 'Pierre Moreau',
   company: 'TechBuild',
   location: 'Casablanca, Maroc',
-  image: "/asia_nature_clients_3.jpg"
+  image: "/asia_nature_clients_3.webp"
 }, {
   author: 'Thomas Bernard',
   company: 'ElectroTech Europe',
   location: 'Paris, France',
-  image: "/asia_nature_clients_4.jpg"
+  image: "/asia_nature_clients_4.webp"
 }, {
   author: 'Marie Dubois',
   company: 'LogiPro International',
   location: 'Genève, Suisse',
-  image: "/asia_nature_clients_5.jpg"
+  image: "/asia_nature_clients_5.webp"
 }];
 export function Testimonials() {
   const {
