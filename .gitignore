@@ -26,3 +26,5 @@ dist-ssr
 # Claude Code / gstack — personal and machine-local
 .claude/
 .gstack/
+.vercel
+.env*.local
